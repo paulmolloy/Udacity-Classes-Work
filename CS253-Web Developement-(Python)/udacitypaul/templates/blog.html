@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<title> Paul's Blog </title>
+	<head>
+
+	<body>
+		<p> Hello and welcome to my Blog </p>
+		
+		<hr>
+		{% for post in posts %}
+			<div class="blog">
+				<div class="blog-title">{{post.title}}</div>
+				<pre class="post-body">{{post.bpost | safe}}</pre>
+		</div>
+		{% endfor %}
+
+	</body>
+
+</html>
+
+ -->
+ {% extends "base.html" %}
+ 
+ 	
+ 
+
+
+{% block content %}
+	<h1> Paul's Blog</h1>
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+{% endblock %}
+</body>
